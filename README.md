@@ -12,8 +12,8 @@
 |- source
 create_word_cloud.exe
 ```
-2. 先點擊 `create_word_cloud.exe` 試試功能環境是否正常，約莫 20 秒黑框視窗關閉，出現 Avengers.png 及 cloud.png
-（如果沒有出現，可以洗洗睡了～）
+2. 先點擊 `create_word_cloud.exe` 試試功能環境是否正常，約莫 20 秒黑框視窗關閉，出現 `Avengers.png` 及 `cloud.png` 表示環境 ok！
+（如果沒有出現，可以洗洗睡了～XD）
 
 3. 開始使用
 3.1 `source` 裡頭可以放置要分析的資料，目前僅支援 *.xlsx, *.docx, *.txt
