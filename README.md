@@ -16,8 +16,8 @@ create_word_cloud.exe
 （如果沒有出現，可以洗洗睡了～XD）
 
 3. 開始使用
-- `source` 裡頭可以放置要分析的資料，目前僅支援 *.xlsx, *.docx, *.txt
-- `data -> template` 裡頭可以放置要成型的樣板，目前資源 *.png 及 *.jpg，注意圖片解析度要夠大
+- `source` 裡頭可以放置要分析的資料，目前僅支援 `*.xlsx`, `*.docx`, `*.txt`
+- `data -> template` 裡頭可以放置要成型的樣板，目前資源 `*.png` 及 `*.jpg`，注意圖片解析度要夠大
 - `data -> stopwords.txt` 可以編輯想要去掉的詞彙
 - `data -> userdict.txt` 可以編輯想要補充的詞彙
 * `stopwords.txt` 與 `userdict.txt` 並不會互斥，例如在 `stopwords.txt` 加入「塔克」，`userdict.txt` 裡頭的「史塔克」一樣會出現在結果圖片上
