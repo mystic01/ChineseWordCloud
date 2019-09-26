@@ -10,7 +10,7 @@ from Reader import Reader
 stopwords_filename = 'data/stopwords.txt'
 font_filename = 'fonts/STFangSong.ttf'
 template_dir = 'data/templates/'
-
+user_dict_filename = 'data/userdict.txt'
 
 def main(folder_path):
     stopwords = set([line.strip() for line in codecs.open(stopwords_filename, 'r', 'utf-8')])
@@ -61,6 +61,7 @@ def save_image(words_stat):
 
 
 def classify_content(content, stopwords):
+    jieba.load_userdict(user_dict_filename)
     segs = jieba.cut(content, cut_all=True)
     words = []
     for seg in segs:
@@ -71,10 +72,6 @@ def classify_content(content, stopwords):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) == 2:
-        main(sys.argv[1])
-    else:
-        print('[usage] <input>')
-
+    main('source\\')
 
 
