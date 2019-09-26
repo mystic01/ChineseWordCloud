@@ -5,7 +5,7 @@
 ![Sample](https://github.com/mystic01/ChineseWordCloud/blob/master/dist/Avengers.png)
 
 ## 懶人使用說明
-1. 下載[壓縮檔](https://github.com/mystic01/ChineseWordCloud/blob/master/dist/create_word_cloud.zip)並解壓會看到以下目錄結構
+1. 下載[壓縮檔](https://github.com/mystic01/ChineseWordCloud/raw/master/dist/create_word_cloud.zip)並解壓會看到以下目錄結構
 ```
 |- data
 |- fonts
