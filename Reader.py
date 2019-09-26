@@ -1,4 +1,5 @@
 import codecs
+import re
 
 import docx
 import docx.document
@@ -66,6 +67,7 @@ class XlsxReader(Reader):
         sheet_data = pd.read_excel(file_name, index_col=None, header=None, keep_default_na=False, sheet_name=None)
         for sheet in sheet_data.values():
             fullText += sheet.to_string()
+            fullText = re.sub(r"\n\d+", "", fullText)
         return fullText + '\n'
 
 class TxtReader(Reader):

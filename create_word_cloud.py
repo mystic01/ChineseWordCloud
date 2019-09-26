@@ -30,7 +30,7 @@ def classify_words(words):
 def get_all_words(folder_path, stopwords):
     words = []
     for file in listdir(folder_path):
-        print("analyze ", file, "...")
+        print("Analyzing ", file, "...")
         ext_name = file.split(".")[-1]
         reader = Reader.get_reader(ext_name)
         content = reader.read(join(folder_path, file))
