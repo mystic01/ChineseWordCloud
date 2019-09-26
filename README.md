@@ -1,57 +1,23 @@
 # ChineseWordCloud
 
-## Example Results
+## 成果範例
 
-If we use some transcripts of movies (i.e., example.txt), we can get the following word clouds.
+!.[Sample](https://github.com/mystic01/ChineseWordCloud/blob/master/dist/Avengers.png)
 
-![alt text](https://github.com/shangjingbo1226/ChineseWordCloud/blob/master/color_love_example.png)
-![alt text](https://github.com/shangjingbo1226/ChineseWordCloud/blob/master/love_example.png)
+## 懶人使用說明
+1. 下載壓縮檔並解壓會看到以下目錄結構
+|- data
+|- fonts
+|- source
+create_word_cloud.exe
 
-## Ideas
-It creates the word cloud for Chinese text corpus. The layout and color of the word cloud is fit to the background templates (accept .png and .jpg files).
+2. 先點擊 create_word_cloud.exe 試試功能環境是否正常，約莫 20 秒黑框視窗關閉，出現 Avengers.png 及 cloud.png
+（如果沒有出現，可以洗洗睡了～）
 
-First, the input text is tokenized into different words. Second, stopwods will be filtered before we count the frequency. In the end, word clouds based on different background templates are generated. The output files are generated and named based on the templage names.
+3. 開始使用
+3.1 `source` 裡頭可以放置要分析的資料，目前僅支援 *.xlsx, *.docx, *.txt
+3.2 `data -> template` 裡頭可以放置要成型的樣板，目前資源 *.png 及 *.jpg，注意圖片解析度要夠大
+3.3 `data -> stopwords.txt` 可以編輯要去掉的詞彙
+3.4 `data -> userdict.txt` 可以編輯想要手動補充的詞彙
 
-## File structure
-```
-|-ChineseWordCloud
-  |-create_word_cloud.py
-  |-data
-    |-stopwords.txt
-    |-templates
-      |-love.png
-      |-color_love.png
-  |-fonts
-    |-STFangSong.ttf
-```
-
-## Usage
-
-Install the required packages through *pip*
-```
-pip install -r requirements.txt
-```
-
-The input file can be specified in the command line as follows.
-```
-python create_word_cloud.py example.txt
-```
-
-The default output will be
-```
-love_example.png
-color_love_example.png
-```
-
-## Advanced Usages
-
-#### More Backgraound Templates
-
-Please put your new pictures under *./data/templates/*. Both png and jpeg files are accepted.
-
-#### Different Fonts
-
-Please modify the *font_filename* in the python script.
-
-## Notes
-This is a part of 2017 birthday gifts to my wife :).
+stopwords.txt 與 userdict.txt 並不會互斥，例如在 stopwords.txt 加入「塔克」，userdict.txt 裡頭的「史塔克」一樣會出現在結果圖片上
